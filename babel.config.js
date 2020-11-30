@@ -1,6 +1,10 @@
-module.exports = function(api) {
+'use strict';
+
+module.exports = function (api) {
   api.cache(true);
+
   return {
-    presets: ['babel-preset-expo'],
+    presets: ['expo'],
+    plugins: ['styled-components', 'react-native-paper/babel'],
   };
 };

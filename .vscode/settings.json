@@ -1,0 +1,39 @@
+{
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [120],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescriptHero.imports.organizeOnSave": true,
+  "typescriptHero.imports.multiLineWrapThreshold": 120,
+  "typescriptHero.imports.grouping": [
+    "/^(react)/",
+    "/^(redux)/",
+    "Modules",
+    "/@/",
+    "/_/",
+    "Plains",
+    "Workspace",
+    "Remaining"
+  ]
+}

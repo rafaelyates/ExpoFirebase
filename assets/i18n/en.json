@@ -1,0 +1,41 @@
+{
+  "routes": {
+    "auth": {
+      "sign-in": "Sign In",
+      "sign-up": "Sign Up"
+    },
+    "user": {
+      "home": "Home"
+    }
+  },
+  "containers": {
+    "sign-in": {
+      "title": "Account data",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign In"
+    },
+    "sign-up": {
+      "title": "Create an account",
+      "username": "Username",
+      "password": "Password",
+      "repeat": "Repeat the password",
+      "submit": "Sign Up"
+    },
+    "user-menu": {
+      "title": "Menu",
+      "routes": {
+        "home": "Home"
+      },
+      "actions": {
+        "sign-out": "Sign Out"
+      }
+    }
+  },
+  "screens": {
+    "home": {
+      "title": "Home",
+      "message": "you've just logged in! 😜"
+    }
+  }
+}
