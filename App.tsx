@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import { AppearanceProvider } from 'react-native-appearance';
 import { enableScreens } from 'react-native-screens';
 
-import { AppLoading } from 'expo';
+import AppLoading from 'expo-app-loading';
 import { loadAsync } from 'expo-font';
 import { getLocalizationAsync } from 'expo-localization';
 import { hideAsync } from 'expo-splash-screen';
@@ -88,6 +88,11 @@ export default function App() {
       <Main />
     </AppearanceProvider>
   ) : (
-    <AppLoading autoHideSplash startAsync={bootstrapConfigs} onFinish={onLoadingComplete} />
+    <AppLoading
+      autoHideSplash
+      startAsync={bootstrapConfigs}
+      onFinish={onLoadingComplete}
+      onError={(error) => console.error(error.message)}
+    />
   );
 }

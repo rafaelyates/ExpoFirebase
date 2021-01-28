@@ -1,4 +1,4 @@
-import firebase, { auth } from 'firebase';
+import firebase from 'firebase';
 
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
@@ -20,7 +20,7 @@ export const signInWithEmailAndPassword = createAsyncThunk(
   async (data: SignInData, { rejectWithValue }) => {
     try {
       const { username, password } = data;
-      const { user } = await auth().signInWithEmailAndPassword(username, password);
+      const { user } = await firebase.auth().signInWithEmailAndPassword(username, password);
 
       return user ? user.getIdToken() : '';
     } catch (error) {
@@ -34,7 +34,7 @@ export const signUpWithEmailAndPassword = createAsyncThunk(
   async (data: SignInData, { rejectWithValue }) => {
     try {
       const { username, password } = data;
-      const { user } = await auth().createUserWithEmailAndPassword(username, password);
+      const { user } = await firebase.auth().createUserWithEmailAndPassword(username, password);
 
       return user ? user.getIdToken() : '';
     } catch (error) {
@@ -47,7 +47,7 @@ export const signOutAndRemoveTokens = createAsyncThunk(
   'expo-firebase/auth/sign-out-and-remove-tokens',
   async (_, { rejectWithValue }) => {
     try {
-      return auth().signOut();
+      return firebase.auth().signOut();
     } catch (error) {
       rejectWithValue(error);
     }

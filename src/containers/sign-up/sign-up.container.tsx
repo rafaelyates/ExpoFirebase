@@ -27,7 +27,6 @@ export default function SignUpContainer() {
 
   const onFormSubmit = (form: SignUpData): void => {
     if (form.password && form.password === form.repeat) {
-      console.log('keppo');
       signUpWithEmailAndPassword(form);
     }
   };
